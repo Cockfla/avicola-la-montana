@@ -1,7 +1,7 @@
 ---
-const lat = -34.8598989;
-const lng = -71.062948;
-const embedUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Av%C3%ADcola+La+Monta%C3%B1a,${lat},${lng}&zoom=15`;
+const lat = -34.85988569464546;
+const lng = -71.06293727116383;
+const embedUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${lat},${lng}&zoom=15`;
 ---
 
 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -22,10 +22,9 @@ const embedUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9
 			<div>
 				<h3 class="text-lg font-bold text-[#bf1e28] mb-2">Avícola La Montaña</h3>
 				<p class="text-gray-600 text-sm">Ubicación estratégica para su conveniencia</p>
-				<p class="text-gray-500 text-xs mt-1">Coordenadas: {lat}, {lng}</p>
 			</div>
 			<a 
-				href={`https://www.google.com/maps?q=Av%C3%ADcola+La+Monta%C3%B1a,${lat},${lng}`}
+				href={`https://www.google.com/maps?q=${lat},${lng}`}
 				target="_blank"
 				rel="noopener noreferrer"
 				class="bg-[#bf1e28] text-white px-4 py-2 rounded-lg hover:bg-[#a54822] transition-colors text-sm font-semibold"
