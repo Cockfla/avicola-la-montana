@@ -1,0 +1,280 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Productos - Avícola La Montaña">
+	<Navbar />
+	
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-br from-[#fff2d7] to-[#bf1e28] py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl md:text-6xl font-bold text-[#bf1e28] mb-6">
+				Nuestros Productos
+			</h1>
+			<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+				Ofrecemos una amplia gama de productos de alta calidad para satisfacer todas las necesidades de su granja avícola
+			</p>
+		</div>
+	</section>
+
+	<!-- Navegación de categorías -->
+	<section class="py-8 bg-white border-b">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex flex-wrap justify-center gap-4">
+				<a href="#alimentos" class="bg-[#bf1e28] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#a54822] transition-colors">
+					🐣 Alimentos
+				</a>
+				<a href="#insumos" class="bg-[#fff2d7] text-[#bf1e28] px-6 py-2 rounded-full font-semibold hover:bg-[#bf1e28] hover:text-white transition-colors">
+					📦 Insumos
+				</a>
+				<a href="#huevos" class="bg-[#fff2d7] text-[#bf1e28] px-6 py-2 rounded-full font-semibold hover:bg-[#bf1e28] hover:text-white transition-colors">
+					🥚 Huevos
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Alimentos para Aves -->
+	<section id="alimentos" class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-[#bf1e28] mb-4">
+					🐣 Alimentos para Aves
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Alimentos especializados formulados con los mejores ingredientes para el óptimo desarrollo de sus aves
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- Alimento Inicial -->
+				<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+					<div class="bg-[#fff2d7] p-8 text-center">
+						<div class="text-6xl mb-4">🐤</div>
+						<h3 class="text-2xl font-bold text-[#bf1e28] mb-4">Alimento Inicial</h3>
+						<p class="text-gray-700 mb-6">
+							Formulado especialmente para pollitos desde el primer día hasta las 3 semanas de edad. 
+							Rico en proteínas y nutrientes esenciales para un desarrollo saludable.
+						</p>
+						<div class="space-y-2 text-sm text-gray-600">
+							<p><strong>Proteína:</strong> 22-24%</p>
+							<p><strong>Energía:</strong> 2,900 kcal/kg</p>
+							<p><strong>Presentación:</strong> Sacos de 25kg</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Alimento de Recría -->
+				<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+					<div class="bg-[#fff2d7] p-8 text-center">
+						<div class="text-6xl mb-4">🐔</div>
+						<h3 class="text-2xl font-bold text-[#bf1e28] mb-4">Alimento de Recría</h3>
+						<p class="text-gray-700 mb-6">
+							Ideal para aves en crecimiento desde las 3 semanas hasta el inicio de la postura. 
+							Balance nutricional perfecto para el desarrollo muscular y óseo.
+						</p>
+						<div class="space-y-2 text-sm text-gray-600">
+							<p><strong>Proteína:</strong> 18-20%</p>
+							<p><strong>Energía:</strong> 2,800 kcal/kg</p>
+							<p><strong>Presentación:</strong> Sacos de 25kg</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Alimento para Ponedoras -->
+				<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+					<div class="bg-[#fff2d7] p-8 text-center">
+						<div class="text-6xl mb-4">🥚</div>
+						<h3 class="text-2xl font-bold text-[#bf1e28] mb-4">Alimento para Ponedoras</h3>
+						<p class="text-gray-700 mb-6">
+							Especialmente formulado para gallinas ponedoras. 
+							Alto contenido de calcio y nutrientes para una producción óptima de huevos.
+						</p>
+						<div class="space-y-2 text-sm text-gray-600">
+							<p><strong>Proteína:</strong> 16-18%</p>
+							<p><strong>Calcio:</strong> 3.5-4.5%</p>
+							<p><strong>Presentación:</strong> Sacos de 25kg</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Insumos Avícolas -->
+	<section id="insumos" class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-[#bf1e28] mb-4">
+					📦 Insumos Avícolas
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Todo tipo de insumos necesarios para el manejo y cuidado de su granja avícola
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<!-- Vitaminas y Minerales -->
+				<div class="bg-[#fff2d7] rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+					<div class="text-4xl mb-4">💊</div>
+					<h3 class="text-xl font-bold text-[#bf1e28] mb-3">Vitaminas y Minerales</h3>
+					<p class="text-gray-700 text-sm mb-4">
+						Complejos vitamínicos y minerales para el fortalecimiento del sistema inmunológico
+					</p>
+					<ul class="text-xs text-gray-600 space-y-1">
+						<li>• Complejo B</li>
+						<li>• Vitamina AD3E</li>
+						<li>• Calcio y Fósforo</li>
+					</ul>
+				</div>
+
+				<!-- Antibióticos -->
+				<div class="bg-[#fff2d7] rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+					<div class="text-4xl mb-4">🩺</div>
+					<h3 class="text-xl font-bold text-[#bf1e28] mb-3">Antibióticos</h3>
+					<p class="text-gray-700 text-sm mb-4">
+						Medicamentos para el tratamiento y prevención de enfermedades avícolas
+					</p>
+					<ul class="text-xs text-gray-600 space-y-1">
+						<li>• Antibióticos orales</li>
+						<li>• Antiinflamatorios</li>
+						<li>• Desparasitantes</li>
+					</ul>
+				</div>
+
+				<!-- Equipos -->
+				<div class="bg-[#fff2d7] rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+					<div class="text-4xl mb-4">🔧</div>
+					<h3 class="text-xl font-bold text-[#bf1e28] mb-3">Equipos</h3>
+					<p class="text-gray-700 text-sm mb-4">
+						Equipos y herramientas para el manejo eficiente de su granja
+					</p>
+					<ul class="text-xs text-gray-600 space-y-1">
+						<li>• Comederos automáticos</li>
+						<li>• Bebederos</li>
+						<li>• Sistemas de iluminación</li>
+					</ul>
+				</div>
+
+				<!-- Higiene -->
+				<div class="bg-[#fff2d7] rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+					<div class="text-4xl mb-4">🧼</div>
+					<h3 class="text-xl font-bold text-[#bf1e28] mb-3">Productos de Higiene</h3>
+					<p class="text-gray-700 text-sm mb-4">
+						Productos para mantener la limpieza y sanitización de su granja
+					</p>
+					<ul class="text-xs text-gray-600 space-y-1">
+						<li>• Desinfectantes</li>
+						<li>• Limpiadores</li>
+						<li>• Control de plagas</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Venta de Huevos -->
+	<section id="huevos" class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-[#bf1e28] mb-4">
+					🥚 Venta de Huevos
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Huevos frescos de la más alta calidad, directamente de nuestras granjas a su mesa
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<!-- Huevos Frescos -->
+				<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+					<div class="bg-[#fff2d7] p-8">
+						<div class="text-center mb-6">
+							<div class="text-6xl mb-4">🥚</div>
+							<h3 class="text-2xl font-bold text-[#bf1e28] mb-4">Huevos Frescos</h3>
+						</div>
+						<div class="space-y-4">
+							<div class="flex justify-between items-center">
+								<span class="font-semibold">Tamaño:</span>
+								<span>Grande y Extra Grande</span>
+							</div>
+							<div class="flex justify-between items-center">
+								<span class="font-semibold">Presentación:</span>
+								<span>Bandejas de 30 unidades</span>
+							</div>
+							<div class="flex justify-between items-center">
+								<span class="font-semibold">Origen:</span>
+								<span>Granjas propias</span>
+							</div>
+							<div class="flex justify-between items-center">
+								<span class="font-semibold">Frescura:</span>
+								<span>Recolección diaria</span>
+							</div>
+						</div>
+						<div class="mt-6 p-4 bg-[#bf1e28] text-white rounded-lg">
+							<h4 class="font-bold mb-2">Características:</h4>
+							<ul class="text-sm space-y-1">
+								<li>• Yemas de color intenso</li>
+								<li>• Clara firme y transparente</li>
+								<li>• Cáscara resistente</li>
+								<li>• Rico en proteínas y vitaminas</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Información Nutricional -->
+				<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+					<div class="bg-[#fff2d7] p-8">
+						<h3 class="text-2xl font-bold text-[#bf1e28] mb-6 text-center">Información Nutricional</h3>
+						<div class="space-y-4">
+							<div class="bg-white rounded-lg p-4">
+								<h4 class="font-bold text-[#bf1e28] mb-2">Por 100g de huevo:</h4>
+								<div class="grid grid-cols-2 gap-2 text-sm">
+									<div><span class="font-semibold">Proteínas:</span> 12.5g</div>
+									<div><span class="font-semibold">Grasas:</span> 11.2g</div>
+									<div><span class="font-semibold">Carbohidratos:</span> 0.7g</div>
+									<div><span class="font-semibold">Calorías:</span> 155 kcal</div>
+								</div>
+							</div>
+							<div class="bg-white rounded-lg p-4">
+								<h4 class="font-bold text-[#bf1e28] mb-2">Vitaminas y Minerales:</h4>
+								<div class="text-sm space-y-1">
+									<div>• Vitamina A, D, E, K</div>
+									<div>• Vitaminas del complejo B</div>
+									<div>• Hierro, Zinc, Selenio</div>
+									<div>• Ácido fólico</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-[#bf1e28]">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+				¿Interesado en nuestros productos?
+			</h2>
+			<p class="text-xl text-[#fff2d7] mb-8 max-w-2xl mx-auto">
+				Contáctenos para conocer precios, disponibilidad y realizar pedidos. 
+				Estamos aquí para ayudarle con todas sus necesidades.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contacto" class="bg-white text-[#bf1e28] px-8 py-3 rounded-lg font-semibold hover:bg-[#fff2d7] transition-colors">
+					Contactar Ahora
+				</a>
+				<a href="tel:+56996987843" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#bf1e28] transition-colors">
+					Llamar +569 96987843
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
+</Layout>

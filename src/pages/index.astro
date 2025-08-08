@@ -1,11 +1,164 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Map from '../components/Map.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Avícola La Montaña - Especialistas en Alimentación Avícola">
+	<Navbar />
+	
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-[#fff2d7] to-[#bf1e28] py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div>
+					<h1 class="text-4xl md:text-6xl font-bold text-[#bf1e28] mb-6">
+						Avícola La Montaña
+					</h1>
+					<p class="text-xl text-gray-700 mb-8">
+						Especialistas en alimentación avícola y venta de huevos frescos. 
+						Ofrecemos productos de alta calidad para el cuidado y desarrollo de sus aves.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4">
+						<a href="/productos" class="bg-[#bf1e28] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#a54822] transition-colors text-center">
+							Ver Productos
+						</a>
+						<a href="/contacto" class="border-2 border-[#bf1e28] text-[#bf1e28] px-8 py-3 rounded-lg font-semibold hover:bg-[#bf1e28] hover:text-white transition-colors text-center">
+							Contactar
+						</a>
+					</div>
+				</div>
+				<div class="text-center">
+					<div class="text-8xl mb-4">🐣</div>
+					<div class="text-6xl mb-4">📦</div>
+					<div class="text-8xl">🥚</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Servicios Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-[#bf1e28] mb-4">
+					Nuestros Servicios
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Ofrecemos una amplia gama de productos y servicios para satisfacer todas las necesidades de su granja avícola
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- Alimentos para Aves -->
+				<div class="bg-[#fff2d7] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+					<div class="text-6xl mb-4">🐣</div>
+					<h3 class="text-2xl font-bold text-[#bf1e28] mb-4">Alimentos para Aves</h3>
+					<p class="text-gray-700 mb-6">
+						Alimentos especializados para ponedoras, recría e inicial. 
+						Formulados con los mejores ingredientes para el óptimo desarrollo de sus aves.
+					</p>
+					<a href="/productos#alimentos" class="text-[#bf1e28] font-semibold hover:underline">
+						Ver más →
+					</a>
+				</div>
+
+				<!-- Insumos Avícolas -->
+				<div class="bg-[#fff2d7] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+					<div class="text-6xl mb-4">📦</div>
+					<h3 class="text-2xl font-bold text-[#bf1e28] mb-4">Insumos Avícolas</h3>
+					<p class="text-gray-700 mb-6">
+						Todo tipo de insumos necesarios para el manejo y cuidado de su granja avícola. 
+						Productos de calidad garantizada.
+					</p>
+					<a href="/productos#insumos" class="text-[#bf1e28] font-semibold hover:underline">
+						Ver más →
+					</a>
+				</div>
+
+				<!-- Venta de Huevos -->
+				<div class="bg-[#fff2d7] rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+					<div class="text-6xl mb-4">🥚</div>
+					<h3 class="text-2xl font-bold text-[#bf1e28] mb-4">Venta de Huevos</h3>
+					<p class="text-gray-700 mb-6">
+						Huevos frescos de la más alta calidad. 
+						Directamente de nuestras granjas a su mesa.
+					</p>
+					<a href="/productos#huevos" class="text-[#bf1e28] font-semibold hover:underline">
+						Ver más →
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Ubicación Section -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-[#bf1e28] mb-4">
+					Nuestra Ubicación
+				</h2>
+				<p class="text-xl text-gray-600">
+					Encuéntrenos en nuestra ubicación estratégica
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+				<div>
+					<div class="bg-white rounded-lg p-8 shadow-lg">
+						<h3 class="text-2xl font-bold text-[#bf1e28] mb-4">Información de Contacto</h3>
+						<div class="space-y-4">
+							<div class="flex items-center">
+								<svg class="w-6 h-6 text-[#bf1e28] mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+								</svg>
+								<div>
+									<p class="font-semibold">Ubicación</p>
+									<p class="text-gray-600">Coordenadas: -34.85988569464546, -71.06293727116383</p>
+								</div>
+							</div>
+							<div class="flex items-center">
+								<svg class="w-6 h-6 text-[#bf1e28] mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+								</svg>
+								<div>
+									<p class="font-semibold">Teléfonos</p>
+									<a href="tel:+56996987843" class="text-[#bf1e28] hover:underline block">+569 96987843</a>
+									<a href="tel:+56981990297" class="text-[#bf1e28] hover:underline block">+569 81990297</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<Map />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-[#bf1e28]">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+				¿Listo para comenzar?
+			</h2>
+			<p class="text-xl text-[#fff2d7] mb-8 max-w-2xl mx-auto">
+				Contáctenos hoy mismo para conocer nuestros productos y servicios. 
+				Estamos aquí para ayudarle con todas sus necesidades avícolas.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contacto" class="bg-white text-[#bf1e28] px-8 py-3 rounded-lg font-semibold hover:bg-[#fff2d7] transition-colors">
+					Contactar Ahora
+				</a>
+				<a href="/productos" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#bf1e28] transition-colors">
+					Ver Productos
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
 </Layout>

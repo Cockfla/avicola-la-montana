@@ -1,0 +1,80 @@
+---
+const currentYear = new Date().getFullYear();
+const lat = -34.85988569464546;
+const lng = -71.06293727116383;
+---
+
+<footer class="bg-[#bf1e28] text-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+			<!-- Información de la empresa -->
+			<div class="col-span-1 md:col-span-2">
+				<div class="flex items-center mb-4">
+					<img src="/logo-avicola.png" alt="Avícola La Montaña" class="h-12 w-auto">
+					<span class="ml-3 text-xl font-bold text-white">Avícola La Montaña</span>
+				</div>
+				<p class="text-[#fff2d7] mb-4">
+					Especialistas en alimentación avícola y venta de huevos frescos. 
+					Ofrecemos productos de alta calidad para el cuidado y desarrollo de sus aves.
+				</p>
+			</div>
+
+			<!-- Enlaces rápidos -->
+			<div>
+				<h3 class="text-lg font-semibold mb-4 text-[#fff2d7]">Enlaces</h3>
+				<ul class="space-y-2">
+					<li><a href="/" class="text-white hover:text-[#fff2d7] transition-colors">Inicio</a></li>
+					<li><a href="/productos" class="text-white hover:text-[#fff2d7] transition-colors">Productos</a></li>
+					<li><a href="/nosotros" class="text-white hover:text-[#fff2d7] transition-colors">Nosotros</a></li>
+					<li><a href="/contacto" class="text-white hover:text-[#fff2d7] transition-colors">Contacto</a></li>
+				</ul>
+			</div>
+
+			<!-- Contacto -->
+			<div>
+				<h3 class="text-lg font-semibold mb-4 text-[#fff2d7]">Contacto</h3>
+				<div class="space-y-2">
+					<div class="flex items-center">
+						<svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+						</svg>
+						<a href={`https://www.google.com/maps?q=${lat},${lng}`} target="_blank" class="text-white hover:text-[#fff2d7] transition-colors">
+							Google Maps
+						</a>
+					</div>
+					<div class="flex items-center">
+						<svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+						</svg>
+						<a href="tel:+56996987843" class="text-white hover:text-[#fff2d7] transition-colors">
+							+569 96987843
+						</a>
+					</div>
+					<div class="flex items-center">
+						<svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+						</svg>
+						<a href="tel:+56981990297" class="text-white hover:text-[#fff2d7] transition-colors">
+							+569 81990297
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Línea divisoria -->
+		<div class="border-t border-[#a54822] mt-8 pt-8">
+			<div class="flex flex-col md:flex-row justify-between items-center">
+				<p class="text-[#fff2d7] text-sm">
+					© {currentYear} Avícola La Montaña. Todos los derechos reservados.
+				</p>
+				<div class="flex space-x-4 mt-4 md:mt-0">
+					<span class="text-[#fff2d7] text-sm">🐣 Alimentos para aves</span>
+					<span class="text-[#fff2d7] text-sm">📦 Insumos avícolas</span>
+					<span class="text-[#fff2d7] text-sm">🥚 Huevos frescos</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,286 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Map from '../components/Map.astro';
+---
+
+<Layout title="Contacto - Avícola La Montaña">
+	<Navbar />
+	
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-br from-[#fff2d7] to-[#bf1e28] py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl md:text-6xl font-bold text-[#bf1e28] mb-6">
+				Contáctenos
+			</h1>
+			<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+				Estamos aquí para ayudarle con todas sus necesidades avícolas. 
+				No dude en contactarnos.
+			</p>
+		</div>
+	</section>
+
+	<!-- Información de Contacto -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<!-- Información de contacto -->
+				<div>
+					<h2 class="text-3xl font-bold text-[#bf1e28] mb-8">
+						Información de Contacto
+					</h2>
+					
+					<div class="space-y-6">
+						<!-- Teléfonos -->
+						<div class="bg-[#fff2d7] rounded-lg p-6">
+							<div class="flex items-center mb-4">
+								<svg class="w-8 h-8 text-[#bf1e28] mr-4" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+								</svg>
+								<h3 class="text-xl font-bold text-[#bf1e28]">Teléfonos</h3>
+							</div>
+							<div class="space-y-2">
+								<a href="tel:+56996987843" class="block text-lg text-gray-700 hover:text-[#bf1e28] transition-colors">
+									📞 +569 96987843
+								</a>
+								<a href="tel:+56981990297" class="block text-lg text-gray-700 hover:text-[#bf1e28] transition-colors">
+									📞 +569 81990297
+								</a>
+							</div>
+						</div>
+
+						<!-- Ubicación -->
+						<div class="bg-[#fff2d7] rounded-lg p-6">
+							<div class="flex items-center mb-4">
+								<svg class="w-8 h-8 text-[#bf1e28] mr-4" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+								</svg>
+								<h3 class="text-xl font-bold text-[#bf1e28]">Ubicación</h3>
+							</div>
+							<div class="space-y-2">
+								<p class="text-gray-700">
+									Coordenadas: -34.85988569464546, -71.06293727116383
+								</p>
+								<a href="https://www.google.com/maps?q=-34.85988569464546,-71.06293727116383" target="_blank" class="inline-block bg-[#bf1e28] text-white px-4 py-2 rounded-lg hover:bg-[#a54822] transition-colors">
+									Ver en Google Maps
+								</a>
+							</div>
+						</div>
+
+						<!-- Horarios -->
+						<div class="bg-[#fff2d7] rounded-lg p-6">
+							<div class="flex items-center mb-4">
+								<svg class="w-8 h-8 text-[#bf1e28] mr-4" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+								</svg>
+								<h3 class="text-xl font-bold text-[#bf1e28]">Horarios de Atención</h3>
+							</div>
+							<div class="space-y-2 text-gray-700">
+								<p><strong>Lunes a Viernes:</strong> 8:00 AM - 6:00 PM</p>
+								<p><strong>Sábados:</strong> 8:00 AM - 2:00 PM</p>
+								<p><strong>Domingos:</strong> Cerrado</p>
+							</div>
+						</div>
+
+						<!-- Servicios -->
+						<div class="bg-[#fff2d7] rounded-lg p-6">
+							<div class="flex items-center mb-4">
+								<svg class="w-8 h-8 text-[#bf1e28] mr-4" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+								</svg>
+								<h3 class="text-xl font-bold text-[#bf1e28]">Nuestros Servicios</h3>
+							</div>
+							<div class="space-y-2 text-gray-700">
+								<p>🐣 Venta de alimento para aves (ponedoras, recría e inicial)</p>
+								<p>📦 Insumos avícolas</p>
+								<p>🥚 Venta de huevos</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Formulario de contacto -->
+				<div>
+					<h2 class="text-3xl font-bold text-[#bf1e28] mb-8">
+						Envíenos un Mensaje
+					</h2>
+					
+					<form class="space-y-6">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">
+									Nombre *
+								</label>
+								<input 
+									type="text" 
+									id="nombre" 
+									name="nombre" 
+									required
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf1e28] focus:border-[#bf1e28] transition-colors"
+									placeholder="Su nombre completo"
+								>
+							</div>
+							<div>
+								<label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">
+									Teléfono *
+								</label>
+								<input 
+									type="tel" 
+									id="telefono" 
+									name="telefono" 
+									required
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf1e28] focus:border-[#bf1e28] transition-colors"
+									placeholder="+569 12345678"
+								>
+							</div>
+						</div>
+
+						<div>
+							<label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+								Email
+							</label>
+							<input 
+								type="email" 
+								id="email" 
+								name="email" 
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf1e28] focus:border-[#bf1e28] transition-colors"
+								placeholder="su@email.com"
+							>
+						</div>
+
+						<div>
+							<label for="servicio" class="block text-sm font-medium text-gray-700 mb-2">
+								Servicio de Interés
+							</label>
+							<select 
+								id="servicio" 
+								name="servicio"
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf1e28] focus:border-[#bf1e28] transition-colors"
+							>
+								<option value="">Seleccione un servicio</option>
+								<option value="alimentos">🐣 Alimentos para aves</option>
+								<option value="insumos">📦 Insumos avícolas</option>
+								<option value="huevos">🥚 Venta de huevos</option>
+								<option value="asesoria">🛠️ Asesoría técnica</option>
+								<option value="otro">Otro</option>
+							</select>
+						</div>
+
+						<div>
+							<label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">
+								Mensaje *
+							</label>
+							<textarea 
+								id="mensaje" 
+								name="mensaje" 
+								rows="6"
+								required
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bf1e28] focus:border-[#bf1e28] transition-colors"
+								placeholder="Cuéntenos sobre su consulta o pedido..."
+							></textarea>
+						</div>
+
+						<button 
+							type="submit"
+							class="w-full bg-[#bf1e28] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#a54822] transition-colors"
+						>
+							Enviar Mensaje
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Mapa Section -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-[#bf1e28] mb-4">
+					Nuestra Ubicación
+				</h2>
+				<p class="text-xl text-gray-600">
+					Visítenos en nuestra ubicación estratégica
+				</p>
+			</div>
+
+			<Map />
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-bold text-[#bf1e28] mb-4">
+					Preguntas Frecuentes
+				</h2>
+				<p class="text-xl text-gray-600">
+					Respuestas a las preguntas más comunes
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-[#fff2d7] rounded-lg p-6">
+					<h3 class="text-lg font-bold text-[#bf1e28] mb-3">
+						¿Hacen envíos a domicilio?
+					</h3>
+					<p class="text-gray-700">
+						Sí, realizamos envíos a domicilio en la zona. Contáctenos para consultar disponibilidad y costos de envío.
+					</p>
+				</div>
+
+				<div class="bg-[#fff2d7] rounded-lg p-6">
+					<h3 class="text-lg font-bold text-[#bf1e28] mb-3">
+						¿Cuál es el mínimo de compra?
+					</h3>
+					<p class="text-gray-700">
+						No tenemos mínimo de compra. Atendemos tanto pedidos pequeños como grandes volúmenes.
+					</p>
+				</div>
+
+				<div class="bg-[#fff2d7] rounded-lg p-6">
+					<h3 class="text-lg font-bold text-[#bf1e28] mb-3">
+						¿Ofrecen asesoría técnica?
+					</h3>
+					<p class="text-gray-700">
+						Sí, contamos con técnicos especializados que pueden asesorarle en el manejo de su granja avícola.
+					</p>
+				</div>
+
+				<div class="bg-[#fff2d7] rounded-lg p-6">
+					<h3 class="text-lg font-bold text-[#bf1e28] mb-3">
+						¿Los huevos son frescos?
+					</h3>
+					<p class="text-gray-700">
+						Absolutamente. Nuestros huevos son recolectados diariamente y garantizamos su frescura.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-[#bf1e28]">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+				¿Listo para contactarnos?
+			</h2>
+			<p class="text-xl text-[#fff2d7] mb-8 max-w-2xl mx-auto">
+				No dude en llamarnos directamente o enviarnos un mensaje. 
+				Estamos aquí para ayudarle con todas sus necesidades avícolas.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="tel:+56996987843" class="bg-white text-[#bf1e28] px-8 py-3 rounded-lg font-semibold hover:bg-[#fff2d7] transition-colors">
+					Llamar +569 96987843
+				</a>
+				<a href="tel:+56981990297" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#bf1e28] transition-colors">
+					Llamar +569 81990297
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
+</Layout>
