@@ -4,9 +4,25 @@ import "../styles/global.css";
 export interface Props {
 	title: string;
 	description?: string;
+	keywords?: string;
+	ogImage?: string;
+	ogType?: string;
+	canonicalUrl?: string;
+	noIndex?: boolean;
 }
 
-const { title, description = "Avícola La Montaña - Especialistas en alimentación avícola y venta de huevos frescos" } = Astro.props;
+const { 
+	title, 
+	description = "Avícola La Montaña - Especialistas en alimentación avícola y venta de huevos frescos. Productos de alta calidad para el cuidado y desarrollo de sus aves en Chile.", 
+	keywords = "avícola, alimentación avícola, huevos frescos, alimentos para aves, insumos avícolas, granja avícola, ponedoras, recría, inicial, Chile",
+	ogImage = "/logo-avicola.webp",
+	ogType = "website",
+	canonicalUrl,
+	noIndex = false
+} = Astro.props;
+
+const fullTitle = title.includes("Avícola La Montaña") ? title : `${title} - Avícola La Montaña`;
+const fullUrl = canonicalUrl || Astro.url.href;
 ---
 
 <!doctype html>
@@ -14,11 +30,112 @@ const { title, description = "Avícola La Montaña - Especialistas en alimentaci
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+		<title>{fullTitle}</title>
 		<meta name="description" content={description} />
-		<title>{title}</title>
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="Avícola La Montaña" />
+		<meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={fullUrl} />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/webp" href="/logo-avicola.webp" />
+		<link rel="apple-touch-icon" href="/logo-avicola.webp" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={fullUrl} />
+		<meta property="og:title" content={fullTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(ogImage, Astro.url)} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="Avícola La Montaña" />
+		<meta property="og:locale" content="es_CL" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={fullUrl} />
+		<meta property="twitter:title" content={fullTitle} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
+		
+		<!-- Additional SEO Meta Tags -->
+		<meta name="theme-color" content="#bf1e28" />
+		<meta name="msapplication-TileColor" content="#bf1e28" />
+		<meta name="format-detection" content="telephone=no" />
+		
+		<!-- Local Business Schema -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Avícola La Montaña",
+			"description": description,
+			"url": "https://avicola-la-montana.com",
+			"logo": "https://avicola-la-montana.com/logo-avicola.webp",
+			"image": "https://avicola-la-montana.com/logo-avicola.webp",
+			"telephone": ["+56996987843", "+56981990297"],
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "CL",
+				"addressRegion": "Región del Maule"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": -34.85988569464546,
+				"longitude": -71.06293727116383
+			},
+			"openingHours": [
+				"Mo-Fr 08:00-18:00",
+				"Sa 08:00-14:00"
+			],
+			"priceRange": "$$",
+			"servesCuisine": "Avícola",
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Productos Avícolas",
+				"itemListElement": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Product",
+							"name": "Alimentos para Aves"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Product",
+							"name": "Insumos Avícolas"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Product",
+							"name": "Huevos Frescos"
+						}
+					}
+				]
+			}
+		})} />
+		
+		<!-- Web App Manifest -->
+		<link rel="manifest" href="/manifest.json" />
+		
+		<!-- Preconnect to external domains -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		
+		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Preload critical resources -->
+		<link rel="preload" href="/logo-avicola.webp" as="image" />
 	</head>
 	<body class="font-sans bg-white">
 		<slot />

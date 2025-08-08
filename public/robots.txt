@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://avicola-la-montana.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
